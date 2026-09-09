@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Nolan Lee
+ *  Date: 9/4/26
 */
 import pkg.*;
 import java.util.Scanner;
