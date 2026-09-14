@@ -23,11 +23,11 @@ class starter {
 		System.out.print("Enter your birthday day ");
 		int day = sc.nextInt();
 		sc.nextLine();
-		System.out.println("Your birthday day is " + text + day);
+		System.out.println("Your birthday day is " + text + " " + day);
 		System.out.print("Enter your birthday year ");
 		String year = sc.nextLine();
-		System.out.println("Your birthday year is " + text + day + year);
-		System.out.print("How much is a buck fifty");
+		System.out.println("Your birthday year is " + text + " " + day + " " + year);
+		System.out.print("How much is a buck fifty ");
 		String buck = sc.nextLine();
 		System.out.print("A buck fifty is $" + buck);
 		// the string "I love to learn coding remotely." will appear in
