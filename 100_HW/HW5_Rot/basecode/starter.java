@@ -1,6 +1,6 @@
 /*
- *	Author:
- *  Date:
+ *	Author:Nolan Lee
+ *  Date:9/17/26
  * 	Collaborator: 
  * ================================================================
  *  ITALIAN BRAINROT SHOWDOWN -- A One-Shot Battle
@@ -31,6 +31,9 @@ public class starter {
         int trainingHours = sc.nextInt();
         sc.nextLine();
         int trainingBonus = trainingHours * 3;
+        int rizzPower = ((int)Math.random() * 20+10) + trainingBonus;
+        int sigmaSpeed = ((int)Math.random() *20 + 10 );
+        int brainrotEnergy = ((int)Math.random()*20+5) + (trainingBonus/2);
 
         // TODO 1: Roll your fighter's stats using Math.random(). Create:
         //   - int rizzPower:      random 10-30, PLUS trainingBonus (Not inclusive of 30)
@@ -43,6 +46,7 @@ public class starter {
         // ============================================================
         System.out.print("Give " + heroName + "'s signature move a name: ");
         String moveName = sc.nextLine();
+        int movePower = ((int)Math.random() * 15+5);
 
         // TODO 2: Create an int movePower: a random whole number from
         //         5 to 20 (Not inclusive of 20).
@@ -53,7 +57,9 @@ public class starter {
         // ============================================================
         System.out.println();
         System.out.println("Suddenly, BOMBARDIRO CROCODILO descends from the sky!");
-
+        int rivalHealth = ((int)Math.random() * 70+80);
+        int rivalPower = ((int)Math.random() * 20+15);
+        int rivalDefense = ((int)Math.random()*15+5);
         // TODO 3: Roll the rival's stats using Math.random(). Create:
         //   - int rivalHealth:  random 80-150  (Not inclusive of 150)
         //   - int rivalPower:   random 15-35   (Not inclusive of 35)
@@ -67,23 +73,27 @@ public class starter {
         //         fighter's stats plus move power:
         //         heroPower = sqrt(rizzPower^2 + sigmaSpeed^2 +
         //                          brainrotEnergy^2) + movePower
+            double heroPower = Math.sqrt((rizzPower^2 + sigmaSpeed^2 + brainrotEnergy^2)) + movePower;
 
-
-        // TODO 5: Roll fate! Create:
+        // TODO 5: Roll fate! Create:)
         //   - double fateRoll: a random decimal from 0.5 up to (but
         //     not including) 2.0 - your luck multiplier this clash.
         //   - boolean maxRizz: true when fateRoll is greater than 1.5
         //     (store the comparison directly -- no if!).
-
+            double fateRoll = ((double)Math.random()*1.5+0.5);
+            boolean maxRizz = fateRoll>1.5;
 
         // TODO 6: Resolve the damage. Create:
         //   - int rawDamage: heroPower * fateRoll, cast to (int)
         //   - int finalDamage: rawDamage minus rivalDefense, but
         //     never less than 10. (Think about how you can use Math.max()).
+            int rawDamage = int(heroPower * fateRoll);
+            int finalDamage = (Math.max(10,rawDamage - rivalDefense));
 
 
         // TODO 7: Create an int rivalHealthRemaining: rivalHealth
         //         minus finalDamage, but never less than 0.
+            int rivalHealthRemaining = (Math.max(0,rivalHealth - finalDamage));
 
 
         // ============================================================
@@ -94,11 +104,13 @@ public class starter {
         //     (but not including) 1.5 -- the rival's fury multiplier.
         //   - int rivalDamage: rivalPower * rivalFuryRoll, cast
         //     to (int).
+            double rivalFuryRoll = ((double)Math.random()*1.5+1);
 
 
         // TODO 9: Create an int heroHealthRemaining: your fighter
         //         starts each clash at 100 health. Subtract
         //         rivalDamage, but never let it drop below 0.
+            int heroHealthRamaining = (Math.max(0,100-rivalDamage));
 
 
         // ============================================================
@@ -106,6 +118,7 @@ public class starter {
         // ============================================================
         // TODO 10: Create an int basePoints: a random whole number
         //          from 50 to 300 (Not inclusive of 300).
+            int basePoints = ((int)Math.random()*250+50);
 
 
         // TODO 11: Tally the reward. Create:
@@ -113,6 +126,9 @@ public class starter {
         //   - int bonusPoints: damageDealt, but capped at a maximum
         //     of 100 extra points.
         //   - int totalRizz: basePoints + bonusPoints
+            int damageDealt = rivalHealth - rivalHealthRemaining;
+            int bonusPoints = Math.max(rivalHealth-rivalHealthRemaining,100);
+            int totalRizz = basePoints + bonusPoints;
 
 
         // ============================================================
