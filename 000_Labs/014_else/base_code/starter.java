@@ -10,13 +10,17 @@ class starter {
 	public static void main(String args[]) {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
-		int taco = (int)(Math.random()*15);
-		if(taco>2){
-			System.out.print("Greater");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Pick a number between 1 - 1000: ");
+		int num1 = sc.nextInt();
+		int taco = (int)(Math.random()*1000+1);
+		if (num1 == taco){
+			System.out.print("You guessed the random number! " + "The number was " + taco);
 		}
 		else{
-			System.out.print("Smaller");
+			System.out.print("Your number wasn't the random number. The number was " + taco);
 		}
+		System.out.println();
 		
 	}
 }
