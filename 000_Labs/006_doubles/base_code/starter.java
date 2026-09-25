@@ -12,6 +12,7 @@ class starter {
 		 double cam = (50);
 		 double cel = (((double)cam-30)/2);
 		 System.out.print((double)cel);
+		 
 		 // put any number in the parenthesis in the double
 		 variable cam to convert from farenheit to celsius
 		

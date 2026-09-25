@@ -15,25 +15,32 @@ class starter {
 		System.out.println();
 		int random = (int)(Math.random()*2+1);
 		String Dragon = "Dragon fruit";
+		String Dragon2 = "dragon fruit";
 		
 		if(random == 1){
 			System.out.println("It is a spikey fruit!");
 			System.out.print("What is your guess?");
 			String text1 = sc.nextLine();
-			if(text1 == "D".toLowerCase() + "ragon fruit"){
+		
+		}
+			if(text1.equals(Dragon)||text1.equals(Dragon2));{
 				System.out.print("You got it! Woo!");
 			}
-			else if(text1 == "D" + "ragon fruit"){
-				System.out.print("Your got it Woo!");
+			else if(!text1.equals(Dragon)||text1.equals(Dragon2)){
+				System.out.println("You sadly didn't guess right, here's another hint!");
+				System.out.println("It is pink on the outside!");
+				String text2 = sc.nextLine();
 			}
+			if(text2.equals(Dragon)||text2.equals(Dragon2)){
+				System.out.print("You got it Woo!");
+			}
+			else if(!text2.equals(Dragon)||!text2.equals(Dragon2)){
+				System.out.print("The answer was Dragon fruit, better luck next time!");
+			}
+			
 
-		}
-		else if(random == 2){
-			System.out.print("It is one of the most popular games in the world!");
-		}
-		else if(random == 3){
-			System.out.print("It is the most populated country in the world!");
-		}
+
+
 
 		
 
