@@ -7,7 +7,44 @@ import java.util.Scanner;
 import java.util.Random;
 
 
+
 class starter {
+	public static boolean isLeapYear(int year){
+		if(year % 400 == 0){
+			return true;
+		}
+		else if(year % 100 == 0){
+			return false;
+		}
+		else if(year % 4 == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public static int getDigitSum(int number){
+		int sum = 0;
+
+		while(number>= 10){
+			sum = sum + (number%10);
+			number = number/10;
+		}
+		sum = sum + number;
+		return sum;
+	}
+
+	public static void printIfConsecutive(int num1, int num2, int num3){
+		if((num1+1==num2)&&(num2+1==num3)){
+			System.out.println("They are consecutive numbers!");
+		return;
+		}
+		else{
+			System.out.println("They are not consecutive numbers!");
+			return;
+		}
+	}
 	// The goal of the first method is to give back whether the year given is a leap year or not. 2004 is a leap year.
 
 	// The goal of the second method is to add all the digits of a number up. Ex: 12345 has a total of 15.
