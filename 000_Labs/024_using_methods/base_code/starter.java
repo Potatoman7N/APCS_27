@@ -14,6 +14,84 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		// Write your code here!
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Type Quest!");
+		System.out.println("It is currently " + getTime() +" and we're ready to play!");
+		System.out.println("Given a sentence, type it as fast as possible!");
+		System.out.println();
+		System.out.println("------------------------------------------");
+		System.out.println("Would you like to:");
+		System.out.println("1 - Play random");
+		System.out.println("2 - Play set");
+		System.out.println("3 - Quit");
+		System.out.println();
+		int num1 = sc.nextInt();
+		sc.nextLine();
+		while((num1 == 1) || (num1 == 2)){
+		if(num1 == 1){
+			if(num1 == 3){
+				break;
+			}
+			System.out.println("You've chosen to randomly select a sentence");
+			System.out.println();
+			System.out.println("-----------------Your sentence is:-----------------");
+			populateArrayList();
+			String given = getSentence();
+			System.out.println(given);
+			System.out.println("---------------------------------------------------");
+			countdown();
+			startTimer();
+			String typed = sc.nextLine();
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: " + endTimer());
+			System.out.println("Errors: " + compareSentences(given, typed) + "/" + lettersInSentence(given) + " letters");
+			double lpm = (int)((lettersInSentence(given))/(endTimer()/60)*100);
+			lpm = (lpm/100.0);
+			System.out.println(lpm + " letters per minute");
+			double wpm = (int)((wordsInSentence(given))/(endTimer()/60)*100);
+			wpm = (wpm/100.0);
+			System.out.println(wpm + " words per minute");
+			System.out.println();
+			System.out.println("Would you like to:");
+			System.out.println("1 - Play random");
+			System.out.println("2 - Play set");
+			System.out.println("3 - Quit");
+			num1 = sc.nextInt();
+			sc.nextLine();
+		}
+		else if(num1 == 2){
+			System.out.println("Please enter what sentence you'd like to play: ");
+			populateArrayList();
+			int index = sc.nextInt();
+			sc.nextLine();
+			String given = getSentence(index);
+			System.out.println("---------------------------------------------------");
+			System.out.println(getSentence(index));
+			System.out.println("---------------------------------------------------");
+			countdown();
+			startTimer();
+			String typed = sc.nextLine();
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: " + endTimer());
+			System.out.println("Errors: " + compareSentences(given, typed) + "/" + lettersInSentence(given) + " letters");
+			double lpm = (int)((lettersInSentence(given))/(endTimer()/60)*100);
+			lpm = (lpm/100.0);
+			System.out.println(lpm + " letters per minute");
+			double wpm = (int)((wordsInSentence(given))/(endTimer()/60)*100);
+			wpm = (wpm/100.0);
+			System.out.println(wpm + " words per minute");
+			System.out.println();
+			System.out.println("Would you like to:");
+			System.out.println("1 - Play random");
+			System.out.println("2 - Play set");
+			System.out.println("3 - Quit");
+			num1 = sc.nextInt();
+			sc.nextLine();
+		}
+		else if(num1 == 3){
+			return;
+		}
+		}
 
 		
 	}
