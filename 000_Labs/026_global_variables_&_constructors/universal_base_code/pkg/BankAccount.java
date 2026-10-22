@@ -8,29 +8,32 @@ import java.util.*;
 
 public class BankAccount {
 	// -------GLOBAL VARIABLES-------
-	String Owner;
-	int Number = 0;
+	private String Owner;
+	private int Number = 0;
 	private static int nextAccountNumber = ((int)(Math.random()*951+50));
-	double Balance;
-	boolean isActive;
+	private double Balance;
+	private boolean isActive;
 
 
 	// -------CONSTRUCTORS-------
 	public BankAccount(){
 		Owner = "unknown";
-		Number = 0;
+		Number = nextAccountNumber;
+		nextAccountNumber++;
 		Balance = 0;
 		isActive = true;
 	}
 		public BankAccount(String o){
-		Number = 0;
+		Number = nextAccountNumber;
+		nextAccountNumber++;
 		Owner = o;
 		Balance = 0;
 		isActive = true;
 
 	}
 		public BankAccount(String o, double b){
-			Number = 0;
+			Number = nextAccountNumber;
+			nextAccountNumber++;
 			Owner = o;
 			Balance = b;
 			isActive = true;
@@ -60,7 +63,7 @@ public class BankAccount {
 		System.out.println("----------------------");
 		System.out.println("Owner: " + Owner);
 		System.out.println("Balance: " + Balance);
-		System.out.println("Account number: " + nextAccountNumber);
+		System.out.println("Account number: " + Number);
 		if(isActive){
 			System.out.println("This bank account is active.");
 		}
