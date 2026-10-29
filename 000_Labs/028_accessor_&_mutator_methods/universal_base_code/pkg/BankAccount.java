@@ -56,6 +56,9 @@ public class BankAccount {
 	public double getBalance(){
 		return Balance;
 	}
+	public void checkBalance(){
+		System.out.println(Balance);
+	}
 	public boolean getisActive(){
 		return isActive;
 	}
@@ -63,18 +66,22 @@ public class BankAccount {
 		return isActive = false;
 	}
 	public void deposit(double d){
+		if(isActive == true){
 		Balance = Balance + d;
 		return;
-	}
-	public double deposit(){
-		return deposit;
+		}
+		else{
+			return;
+		}
 	}
 	public void withdraw(double w){
+		if((isActive == true)&&(Balance>=withdraw)){
 		Balance = Balance - w;
 		return;
-	}
-	public double withdraw(){
-		return withdraw;
+		}
+		else{
+			return;
+		}
 	}
 	public int getNumber(){
 		return Number;

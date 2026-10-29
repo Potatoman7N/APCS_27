@@ -21,10 +21,43 @@ class starter {
             default: return "Happy";
 		}
 	}
-
+	public static int randAge(){
+		int ranage = (int)(Math.random()*350);
+		return ranage;
+	}
 	public static void main(String args[]) {
 		// Your code goes below here
+		int x = 0;
 		PooleDwarf test = new PooleDwarf();
+		PooleDwarf a = new PooleDwarf(randName(), randAge());
+		PooleDwarf b = new PooleDwarf(randName(), randAge());
+		PooleDwarf c = new PooleDwarf(randName(), randAge());
+		PooleDwarf d = new PooleDwarf(randName(), randAge());
+		PooleDwarf e = new PooleDwarf(randName(), randAge());
+		PooleDwarf f = new PooleDwarf(randName(), randAge());
+		PooleDwarf g = new PooleDwarf(randName(), randAge());
+		while(a.isSameName("Dopey") == true){
+			x++;
+		}
+		while(a.isSameName("Bashful") == true){
+			x++;
+		}
+		while(a.isSameName("Grumpy") == true){
+			x++;
+		}
+		while(a.isSameName("Sleepy") == true){
+			x++;
+		}
+		while(a.isSameName("Sneezy") == true){
+			x++;
+		}
+		while(a.isSameName("Happy") == true){
+			x++;
+		}
+		while(a.isSameName("Doc") == true){
+			x++;
+		}
+		System.out.println("There are " + x);
 		
 	}
 }
