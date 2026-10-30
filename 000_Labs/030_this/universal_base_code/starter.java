@@ -36,28 +36,24 @@ class starter {
 		PooleDwarf e = new PooleDwarf(randName(), randAge());
 		PooleDwarf f = new PooleDwarf(randName(), randAge());
 		PooleDwarf g = new PooleDwarf(randName(), randAge());
-		while(a.isSameName("Dopey") == true){
+		if(a.isSameName(b.getName())){
 			x++;
 		}
-		while(a.isSameName("Bashful") == true){
+		if(a.isSameName(c.getName())){
 			x++;
 		}
-		while(a.isSameName("Grumpy") == true){
+		if(a.isSameName(d.getName())){
 			x++;
 		}
-		while(a.isSameName("Sleepy") == true){
+		if(a.isSameName(e.getName())){
 			x++;
 		}
-		while(a.isSameName("Sneezy") == true){
+		if(a.isSameName(f.getName())){
 			x++;
 		}
-		while(a.isSameName("Happy") == true){
+		if(a.isSameName(g.getName())){
 			x++;
 		}
-		while(a.isSameName("Doc") == true){
-			x++;
-		}
-		System.out.println("There are " + x);
-		
+		System.out.println(a.getName() + "was the name with " + x + " matches!");
 	}
 }
