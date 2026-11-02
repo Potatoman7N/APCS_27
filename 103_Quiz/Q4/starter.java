@@ -20,7 +20,7 @@ class starter {
 		System.out.println("-----------------------------");
 
 
-		// Part 3	---------------------------------------------
+		// // Part 3	---------------------------------------------
 
 		System.out.println(mA.getMovieName() + " had a total revenue of " + mA.getRevenue());
 		System.out.println(mB.getMovieName() + " had a total revenue of " + mB.getRevenue());
@@ -28,7 +28,7 @@ class starter {
 		System.out.println("-----------------------------");
 
 
-		// Part 4	---------------------------------------------
+		// // Part 4	---------------------------------------------
 
         mB.addRating(7.8);
         mB.addRating(8.5);
@@ -40,7 +40,7 @@ class starter {
 		System.out.println("-----------------------------");
 
 
-		// Part 5	---------------------------------------------
+		// // Part 5	---------------------------------------------
 
 		if(mA.compareRatings(mB)){                     // Ignore movies of the same ratings
 			System.out.println(mA.getMovieName() + " is better than " + mB.getMovieName());
@@ -51,17 +51,17 @@ class starter {
         System.out.println();
 		System.out.println("-----------------------------");
 
-        // Part 6	--------------------------------------------- Extra
+        // // Part 6	--------------------------------------------- Extra
 
-		System.out.println("The movie " + mA.getMovieName() + " has a revenue of " + mA.revenueToString());
-        System.out.println();
-		System.out.println("-----------------------------");
+		// System.out.println("The movie " + mA.getMovieName() + " has a revenue of " + mA.revenueToString());
+        // System.out.println();
+		// System.out.println("-----------------------------");
 
-		// Part 7	--------------------------------------------- Extra
+		// // Part 7	--------------------------------------------- Extra
 
-		Movie dupC = mC.pirateMovie();			// Populates dupC with a copy of the movie mC
-		dupC.movieToString();
-		System.out.println("-----------------------------");
+		// Movie dupC = mC.pirateMovie();			// Populates dupC with a copy of the movie mC
+		// dupC.movieToString();
+		// System.out.println("-----------------------------");
 
 	}
 }
