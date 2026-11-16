@@ -35,7 +35,12 @@ class starter {
 	}
 
 	public static void leftShift(String [] arr){
-
+		for(int i = 1; i<arr.length; i++){
+			arr[i].equals(arr[i-1]);
+			System.out.println(arr[i]);
+		}
+		arr[arr.length-1] = arr[0];
+		System.out.println(arr[arr.length-1]);
 	}
 
 	public static void leftShift(String [] arr, int num){
