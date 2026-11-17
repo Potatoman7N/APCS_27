@@ -18,29 +18,29 @@ public class BaseClass {
 			min = Integer.MAX_VALUE;
 			i = 0;
 		}
-		public void toStringArray(int [] num){
-			for(i = 0; i<num.length; i++){
-				System.out.println(num[i]);
+		public void toStringArray(int [] arr){
+			for(i = 0; i<arr.length; i++){
+				System.out.println(arr[i]);
 			}
 		}
-		public int getArrayAverage(int [] num){
-			for(i = 0; i<num.length; i++){
-				int total = num[i] + num[i + 1];
-				return (((double)total)/(num.length - 1));
+		public int getArrayAverage(int [] arr){
+			for(i = 0; i<arr.length; i++){
+				int total = arr[i] + arr[i + 1];
+				return (((double)total)/(arr.length - 1));
 			}
 		}
-		public int getArrayMax(int [] num){
-			for(i = 0; i<num.length; i++){
-			if(num[i] > max){
-				max = num[i];
+		public int getArrayMax(int [] arr){
+			for(i = 0; i<arr.length; i++){
+			if(arr[i] > max){
+				max = arr[i];
 			}
 			}
 			return max;
 		}
-		public int getArrayMin(int [] num){
-		for(i = 0; i<num.length; i++){
-			if(num[i] < min){
-				min = num[i];
+		public int getArrayMin(int [] arr){
+		for(i = 0; i<arr.length; i++){
+			if(arr[i] < min){
+				min = arr[i];
 			}
 			}
 			return min;
